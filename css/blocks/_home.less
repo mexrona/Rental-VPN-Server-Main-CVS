@@ -1,0 +1,262 @@
+// main: ../style.less
+
+.home {
+    .flex(normal);
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin-bottom: 6rem;
+}
+
+
+
+.home__inner {
+    height: 35rem;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+
+.home__title {
+    margin-bottom: 4rem;
+
+    .font(900, 9rem);
+}
+
+
+
+.home__text {
+    margin: 6rem 0;
+
+    .font(700, 2.4rem);
+}
+
+
+
+.home__subtitle {
+    letter-spacing: 0.2em;
+
+
+    &--first {
+        margin-bottom: 1rem;
+
+        font-weight: 500;
+    }
+}
+
+
+
+.home__button {
+    display: block;
+    width: fit-content;
+    padding: 0.5em 1em;
+    margin: 0 auto;
+
+    font-weight: 500;
+    font-size: 2rem;
+    color: @secondary;
+    letter-spacing: 0.2em;
+
+    border: 0.1rem solid @secondary;
+    border-radius: 0.1em;
+    overflow: hidden;
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+    position: relative;
+
+
+    &:hover {
+        color: @primary;
+
+        background-color: @secondary;
+    }
+
+
+    &::after {
+        content: "";
+
+        background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -50%;
+
+        transform: rotateZ(60deg) translate(-5em, 7.5em);
+    }
+
+    &:after, &:after {
+        animation: sheen 2s forwards;
+        animation-iteration-count:infinite;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes sheen {
+        100% {
+            transform: rotateZ(60deg) translate(1em, -9em);
+        }
+    }
+}
+
+
+
+@media @large {
+    .home__title {
+        font-size: 8rem;
+    }
+
+
+
+    .home__text {
+        font-size: 2rem;
+    }
+}
+
+
+
+@media @desktop {
+    .home__inner {
+        height: 28rem;
+    }
+
+
+
+    .home__title {
+        margin-bottom: 2rem;
+        font-size: 7rem;
+    }
+
+
+
+    .home__text {
+        margin: 4rem 0;
+    }
+}
+
+
+
+@media @laptop {
+    .home__inner {
+        height: 18rem;
+    }
+
+
+
+    .home__title {
+        margin-bottom: 0;
+
+        font-size: 5rem;
+    }
+
+
+
+    .home__button {
+        font-size: 1.8rem;
+    }
+
+
+
+    .home__text {
+        margin: 2rem 0;
+
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@media @tablet {
+    .home__inner {
+        height: 14rem;
+    }
+
+
+
+    .home__title {
+        font-size: 3.5rem;
+    }
+
+
+
+    .home__button {
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+    }
+
+
+
+    .home__text {
+        margin: 1rem 0;
+
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media @mobile {
+    .home__inner {
+        height: 12rem;
+    }
+
+
+
+    .home__title {
+        font-size: 2.5rem;
+    }
+
+
+
+    .home__button {
+        width: 21rem;
+
+        font-size: 1.1rem;
+    }
+
+
+
+    .home__text {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+@media @small {
+    .home__inner {
+        height: 11rem;
+    }
+
+
+
+    .home__title {
+        font-size: 2rem;
+    }
+
+
+
+    .home__button {
+        margin: 1rem auto;
+    }
+
+
+
+    .home__text {
+        width: 20rem;
+        margin: 0 auto 1rem;
+    }
+
+
+    .home__subtitle {
+        &--second {
+            max-width: 26rem;
+            margin: 0 auto;
+        }
+    }
+}

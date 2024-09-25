@@ -1,0 +1,187 @@
+// main: ../style.less
+
+.about {
+    .flex(normal);
+
+    height: auto;
+    min-height: 100vh;
+    margin-bottom: 6rem;
+}
+
+
+
+.about__inner {
+    margin: 0 auto;
+}
+
+
+
+.about__pros {
+    padding: 3rem;
+
+    border: 0.1rem solid @secondary;
+    -webkit-box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+    -moz-box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+    box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+}
+
+
+
+.about__title {
+    .font(700, 2.4rem);
+
+    text-align: center;
+
+
+    &--pros {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+.about__block {
+    .flex(normal);
+
+    flex-wrap: wrap;
+}
+
+
+
+.about__text {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding-left: 6rem;
+
+    position: relative;
+
+
+    &--pros {
+        width: 50%;
+    }
+}
+
+
+
+.about__instruction {
+    padding: 3rem;
+    margin-top: 6rem;
+
+    border: 0.1rem solid @secondary;
+    -webkit-box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+    -moz-box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+    box-shadow: 0.5rem 0.5rem 0.5rem @shadow;
+}
+
+
+
+@media @large {
+    .about__title {
+        font-size: 2rem;
+    }
+}
+
+
+
+@media @desktop {
+    .about__pros,
+    .about__instruction {
+        padding: 1.5rem;
+    }
+
+
+
+    .about__instruction {
+        margin-top: 3rem;
+    }
+}
+
+
+
+@media @laptop {
+    .about__pros {
+        padding-bottom: 0.5rem;
+    }
+
+
+
+    .about__title {
+        &--pros {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+    .about__text {
+        height: 5rem;
+        padding-left: 3rem;
+    }
+
+
+
+    .about__instruction {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+@media @tablet {
+    .about {
+        min-height: calc(100vh * 0.5);
+    }
+
+
+    .about__title {
+        font-size: 1.6rem;
+    }
+
+
+
+    .about__instruction {
+        width: 100%;
+    }
+
+
+
+    .about__text {
+        height: 4rem;
+    }
+}
+
+
+
+@media @mobile {
+    .about__pros {
+        width: 100%;
+    }
+
+
+
+    .about__text {
+        &--pros {
+            width: 100%;
+        }
+
+
+        &--instruction {
+            height: 6rem;
+        }
+    }
+}
+
+
+
+@media @small {
+    .about__text {
+        &--pros {
+            height: 6rem;
+        }
+
+        &--instruction {
+            height: 8rem;
+        }
+    }
+}
